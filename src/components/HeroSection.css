@@ -1,5 +1,6 @@
 .hero-container {
-    background: url('../assets/genome.jpg') no-repeat center center/cover; 
+    background: url('../assets/quotes.gif') no-repeat center center/cover,
+    url('../assets/microbiome.jpg') no-repeat center center/cover; 
     height: 100vh; 
     display: flex;
     flex-direction: column;
