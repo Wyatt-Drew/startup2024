@@ -2,17 +2,18 @@ import React, { useState } from 'react';
 import './LabDataForm.css'; // Ensure this CSS file is updated with the styles provided
 
 const CaseForm = () => {
-  const [caseData, setCaseData] = useState({
-    treatment: '',
-    dose: '',
-  });
-
-  const handleChange = (event) => {
-    setCaseData({
-      ...caseData,
-      [event.target.name]: event.target.value,
+    const [caseData, setCaseData] = useState({
+      treatment: '',
+      dose: '',
+      outcome: '', // Added outcome to the state to manage its value
     });
-  };
+  
+    const handleChange = (event) => {
+      setCaseData({
+        ...caseData,
+        [event.target.name]: event.target.value,
+      });
+    };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -29,7 +30,7 @@ const CaseForm = () => {
 
         <div className="input-group-row"> {/* Updated class name for styling */}
           <div className="lab-data-group">
-            <h3>Treatment Prescribed:</h3>
+            <label>Treatment Prescribed:</label>
             <input
               type="text"
               id="treatment"
@@ -40,7 +41,7 @@ const CaseForm = () => {
               required
             />
 
-            <h3>Dose(mg/day):</h3>
+            <label>Dose(mg/day):</label>
             <input
               type="text"
               id="dose"
@@ -52,10 +53,18 @@ const CaseForm = () => {
             />
           </div>
         </div>
-        <div className="input-group">
-        <h3>Outcome:</h3>
-          <input type="text" id="outcome" name="outcome" placeholder="Outcome" required />
-        </div>
+        <div className="lab-data-group"> {/* Adjusted for Outcome to match other inputs */}
+            <label>Outcome:</label>
+            <input
+              type="text"
+              id="outcome"
+              name="outcome"
+              placeholder="Outcome"
+              value={caseData.outcome} // Managed state for outcome
+              onChange={handleChange}
+              required
+            />
+          </div>
         <div className="form-actions">
             <div></div>
           <button type="submit">Submit</button>

@@ -10,8 +10,8 @@ const HomePage = () => {
         <div>
             <HeroSection />
             <StoryPage/>
-            <GalleryPage/>
-            <QuotePage/>
+            {/* <GalleryPage/> */}
+            {/* <QuotePage/> */}
             <TeamPage/>
         </div>
     );
