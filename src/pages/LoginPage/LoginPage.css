@@ -108,8 +108,8 @@
     color: #b3b3b3;
   }
 .form-button{
-    background-color: #e8716d;
-    border:#e8716d;
+    background-color: #ff5449;
+    border:#ff5449;
     border-radius: 3px;
     padding: 10px 35px;
     font-size: 1rem;
@@ -122,7 +122,7 @@
     transition: background-color 0.2s ease-in-out;
 }
 .form-button:hover{
-    background-color: #e14641;
+    background-color: #e63e30;
 }
 .forms_buttons {
     display: flex;
@@ -136,7 +136,7 @@
     font-weight: 500;
     line-height: 1em;
     text-transform: uppercase;
-    color: #e8716d;
+    color: #ff5449;
     letter-spacing: 0.1rem;
 }
 .user-form{
