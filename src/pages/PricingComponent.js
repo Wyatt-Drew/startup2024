@@ -44,7 +44,7 @@ const PricingComponent = () => {
           <p className="licenses">Unlimited licenses</p>
           <p className="support">24/7 support and personal account manager</p>
           <Link to="/QuotePage">
-            <button>Choose Plan</button>
+            <button>Contact</button>
           </Link>
         </div>
       </div>
