@@ -80,3 +80,9 @@ button:hover {
         flex-wrap: wrap; /* Allows wrapping on smaller screens */
     }
 }
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0; /* Adjust padding as needed */
+  }
+  

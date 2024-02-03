@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './LabDataForm.css'; // Ensure this CSS file is updated with the new styles
 
-const LabDataForm = () => {
+const CaseForm = () => {
   const [labData, setLabData] = useState([{ drugName: '', mic: '' }]);
 
   const handleLabDataChange = (index, event) => {
@@ -80,4 +80,4 @@ const LabDataForm = () => {
   );
 };
 
-export default LabDataForm;
+export default CaseForm;
