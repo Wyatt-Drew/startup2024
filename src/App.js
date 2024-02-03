@@ -19,7 +19,7 @@ function App() {
         
         <Route path="/LabDataForm" element={<LabDataForm />} />
         <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="/CaseForm/:id/:disease/:site" element={CaseForm} />
+        <Route path="/CaseForm" element={<CaseForm />} />
       </Routes>
       <Footer/>
       <Chatbot/>

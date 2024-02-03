@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './LabDataForm.css'; // Ensure CSS is properly set up
 import './Dashboard.css';
 
@@ -12,27 +13,28 @@ const initialCases = [
   ];
   
 
-const Dashboard = () => {
-  const [cases, setCases] = useState(initialCases);
+  const Dashboard = () => {
+    const [cases, setCases] = useState(initialCases);
+    const navigate = useNavigate(); // Use the useNavigate hook
   
-  const handleComplete = (caseId) => {
-    // Remove the case from the list to simulate marking it as complete
-    setCases(cases.filter(caseItem => caseItem.id !== caseId));
-  };
-
-  return (
-    <div className="dashboard-container">
-      {cases.map(caseItem => (
-        <div key={caseItem.id} className="dashboard-item">
+    const handleComplete = (caseData) => {
+      // Navigate to CaseForm and pass caseData as state
+      navigate('/CaseForm', { state: caseData });
+    };
+  
+    return (
+      <div className="dashboard-container">
+        {cases.map(caseItem => (
+          <div key={caseItem.id} className="dashboard-item">
             <h3>Patient ID:{caseItem.id}</h3>
-          <h4>Disease: {caseItem.disease}</h4>
-          <h4>Site: {caseItem.site}</h4>
-          {/* Implement inputs or display for treatment, dose, outcome as needed */}
-          <button onClick={() => handleComplete(caseItem.id)}>Complete</button>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-export default Dashboard;
+            <h4>Disease: {caseItem.disease}</h4>
+            <h4>Site: {caseItem.site}</h4>
+            {/* Implement inputs or display for treatment, dose, outcome as needed */}
+            <button onClick={() => handleComplete(caseItem)}>Complete</button>
+          </div>
+        ))}
+      </div>
+    );
+  };
+  
+  export default Dashboard;

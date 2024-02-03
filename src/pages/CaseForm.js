@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
-import './LabDataForm.css'; // Ensure this CSS file is updated with the styles provided
+import { useLocation } from 'react-router-dom'; // Import useLocation
+import './LabDataForm.css';
 
 const CaseForm = () => {
-    const [caseData, setCaseData] = useState({
-      treatment: '',
-      dose: '',
-      outcome: '', // Added outcome to the state to manage its value
-    });
+  const location = useLocation(); // Use the useLocation hook
+  const caseDataFromDashboard = location.state || {}; // Access the state
+
+  const [caseData, setCaseData] = useState({
+    // Initialize with data passed from Dashboard or default values
+    treatment: '',
+    dose: '',
+    outcome: '',
+    ...caseDataFromDashboard // Spread in the caseDataFromDashboard to override defaults
+  });
   
     const handleChange = (event) => {
       setCaseData({
@@ -21,12 +27,14 @@ const CaseForm = () => {
     // Additional submission logic here
   };
 
+  // Use the caseData state for displaying disease and site
   return (
     <div className="lab-data-form-container">
       <form onSubmit={handleSubmit} className="lab-data-form">
         <h2>Case Submission</h2>
-        <h3>Disease: Streptococcus viridis-123</h3>
-        <h3>Site: Knee</h3>
+        {/* Dynamically display disease and site */}
+        <h3>Disease: {caseData.disease || 'N/A'}</h3>
+        <h3>Site: {caseData.site || 'N/A'}</h3>
 
         <div className="input-group-row"> {/* Updated class name for styling */}
           <div className="lab-data-group">
