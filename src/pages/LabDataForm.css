@@ -19,7 +19,7 @@
 
 .input-group, .lab-data-group {
     display: flex;
-    flex-wrap: wrap; /* Change to nowrap if you want to strictly enforce inline display */
+    flex-wrap: wrap; 
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;

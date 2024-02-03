@@ -57,7 +57,7 @@ const LabDataForm = () => {
               onChange={(event) => handleLabDataChange(index, event)}
               required
             />
-            <label htmlFor={`mic-${index}`}>MIC:</label>
+            <label htmlFor={`mic-${index}`}>MIC(µg/mL):</label>
             <input
               type="number"
               name="mic"
