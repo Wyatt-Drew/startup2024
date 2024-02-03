@@ -23,11 +23,11 @@ const PaymentPage = () => {
         <p><strong>Order ID:</strong> {order.orderId}</p>
         <p><strong>Total Amount:</strong> {order.totalAmount}</p>
         <h3>Ordered Items:</h3>
-        <ul>
+        <p>
           {order.items.map((item, index) => (
-            <li key={index}>{item}</li>
+            <div key={index}>{item}</div>
           ))}
-        </ul>
+        </p>
       
       <div className="PaymentButtonContainer">
         <SimpleGooglePayButton />
