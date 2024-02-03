@@ -44,7 +44,7 @@ const LabDataForm = () => {
           <label htmlFor="siteOfInfection">Site of infection:</label>
           <input type="text" id="siteOfInfection" name="siteOfInfection" placeholder="Enter site of infection" required />
         </div>
-
+        <h2>Lab Drug Tests:</h2>
         {labData.map((inputField, index) => (
           <div key={index} className="lab-data-group">
             <label htmlFor={`drugName-${index}`}>Drug Name:</label>

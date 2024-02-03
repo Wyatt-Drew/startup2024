@@ -85,4 +85,6 @@ button:hover {
     justify-content: space-between;
     padding: 10px 0; /* Adjust padding as needed */
   }
-  
+  .lab-data-form h2{
+    text-align: center;
+  }

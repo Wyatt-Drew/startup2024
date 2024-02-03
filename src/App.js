@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import LoginPage from './pages/LoginPage/LoginPage';
 import Chatbot from './components/Chatbot';
 import CaseForm from './pages/CaseForm';
+import LabDataForm from './pages/LabDataForm';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         {/* <Route path="/" element={<HomePage />} /> */}
         <Route path="/" element={<CaseForm />} />
+        {/* <Route path="/" element={<LabDataForm />} /> */}
       </Routes>
       <Footer/>
       {/* <Chatbot/> */}
