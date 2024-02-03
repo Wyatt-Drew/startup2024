@@ -3,11 +3,12 @@ import { useLocation } from 'react-router-dom';
 import SimpleGooglePayButton from '../components/SimpleGooglePayButton';
 import './PaymentPage.css';
 
+
 const PaymentPage = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const totalAmount = searchParams.get('amount');
-  const plan = totalAmount === '6000' ? 'Professional Plan' : 'Basic Plan';
+  const plan = totalAmount === '3000' ? 'Professional Plan' : 'Basic Plan';
 
   // Sample order details
   const order = {
