@@ -15,8 +15,8 @@ function App() {
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         {/* <Route path="/" element={<HomePage />} /> */}
-        <Route path="/" element={<CaseForm />} />
-        {/* <Route path="/" element={<LabDataForm />} /> */}
+        {/* <Route path="/" element={<CaseForm />} /> */}
+        <Route path="/" element={<LabDataForm />} />
       </Routes>
       <Footer/>
       {/* <Chatbot/> */}
