@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
+import { useLocation } from 'react-router-dom';
 import SimpleGooglePayButton from '../components/SimpleGooglePayButton';
 import './PaymentPage.css';
 
 const PaymentPage = () => {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const totalAmount = searchParams.get('amount');
+  const plan = totalAmount === '959' ? 'Professional Plan' : 'Basic Plan';
+
   // Sample order details
   const order = {
     orderId: '12345',
-    totalAmount: '$50.00',
-    items: ['Product 1', 'Product 2', 'Product 3'],
+    totalAmount: `$${totalAmount}.00`,
+    items: [plan],
   };
 
   return (
@@ -23,7 +29,7 @@ const PaymentPage = () => {
           ))}
         </ul>
       </div>
-<SimpleGooglePayButton/>
+      <SimpleGooglePayButton />
     </div>
   );
 };

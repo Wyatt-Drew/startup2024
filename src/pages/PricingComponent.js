@@ -1,9 +1,12 @@
-//Pricing estimated from https://www.statista.com/accounts/ca
-
 import React from 'react';
-import './PricingComponent.css'; // Ensure this path matches the location of your CSS file
+import './PricingComponent.css';
 import { Link } from 'react-router-dom';
+
 const PricingComponent = () => {
+  // Define pricing details
+  const basicPlanPrice = 549;
+  const professionalPlanPrice = 959;
+
   return (
     <div>
       <div className="pricing-header">
@@ -14,10 +17,10 @@ const PricingComponent = () => {
         {/* Basic Plan */}
         <div className="pricing-tier">
           <h2>Basic Plan</h2>
-          <p className="price">$549 USD per month, billed annually</p>
+          <p className="price">$549 USD per month</p>
           <p className="licenses">1 license</p>
           <p className="support">Email support</p>
-          <Link to="/PaymentPage">
+          <Link to={`/PaymentPage?amount=${basicPlanPrice}`}>
             <button>Choose Plan</button>
           </Link>
         </div>
@@ -25,17 +28,17 @@ const PricingComponent = () => {
         {/* Professional Plan - Recommended */}
         <div className="pricing-tier recommended">
           <h2>Professional Plan</h2>
-          <p className="price">$959 USD per month, billed annually</p>
+          <p className="price">$959 USD per month</p>
           <p className="licenses">Up to 5 licenses</p>
           <p className="support">Priority email and phone support</p>
-          <Link to="/PaymentPage">
+          <Link to={`/PaymentPage?amount=${professionalPlanPrice}`}>
             <button>Choose Plan</button>
           </Link>
           <div className="recommendation-badge">Most Popular</div>
         </div>
 
-   {/* Enterprise Plan */}
-   <div className="pricing-tier">
+        {/* Enterprise Plan */}
+        <div className="pricing-tier">
           <h2>Enterprise Plan</h2>
           <p className="price">Contact us for pricing</p>
           <p className="licenses">Unlimited licenses</p>
