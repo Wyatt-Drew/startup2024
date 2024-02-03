@@ -47,13 +47,13 @@ const Navbar = () => {
             </ul></div>} />
             <NavItem title="Contact Us" dropdownContent={<div><ul style={{listStyleType: 'none'}}>
               <li>
-                <a href="mailto:MyCorporateEmail@gmail.com">Email</a>
+                <a href="mailto:AureusDatabase@gmail.com">Email</a>
               </li>
               <li>
-                <a href="https://facebook.com/MyCorporateFacebook">Facebook</a>
+                <a href="https://facebook.com/AureusDatabase">Facebook</a>
               </li>
               <li>
-                <a href="https://twitter.com/MyCorporateTwitter">Twitter</a>
+                <a href="https://twitter.com/AureusDatabase">Twitter</a>
               </li>
             </ul></div>} />
             {user ? (

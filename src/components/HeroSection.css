@@ -1,5 +1,5 @@
 .hero-container {
-    background: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExemh1NHNkY2htbXM3aWtjNWhjZWt1cTJqemcyb242Y2Npc3VncHZyeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/w6ewL3aHH2laudC7EN/giphy.gif') no-repeat center center/cover; /* Replace with your image path */
+    background: url('../assets/genome.jpg') no-repeat center center/cover; 
     height: 100vh; 
     display: flex;
     flex-direction: column;
