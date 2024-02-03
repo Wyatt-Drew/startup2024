@@ -52,9 +52,14 @@ const CaseForm = () => {
             />
           </div>
         </div>
-
+        <div className="input-group">
+        <h3>Outcome:</h3>
+          <input type="text" id="outcome" name="outcome" placeholder="Outcome" required />
+        </div>
         <div className="form-actions">
+            <div></div>
           <button type="submit">Submit</button>
+          <div></div>
         </div>
       </form>
     </div>

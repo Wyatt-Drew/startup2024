@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../assets/generic-logo.jpg';
+import logo from '../assets/aureus_logo.png';
 
 const Dropdown = ({ children }) => {
   return (
@@ -32,9 +32,9 @@ const Navbar = () => {
                       <Link to="/" className='nav-item logo-container'>
                     <img src={logo} className='logo'/> 
                 </Link>
-      <NavItem title="Home" to="/"/>
-      <NavItem title="About" />
-      <NavItem title="Services" />
+      <NavItem title="About" to="/"/>
+      <NavItem title="Start Case" to="/LabDataForm"/>
+      <NavItem title="Dashboard" to="/Dashboard"/>
       <NavItem title="Contact Us" dropdownContent={<div><ul style={{listStyleType: 'none'}}>
               <li>
                 <a href="mailto:MyCorporateEmail@gmail.com">Email</a>
