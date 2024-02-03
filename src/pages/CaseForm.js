@@ -28,21 +28,19 @@ const CaseForm = () => {
         <h3>Site: Knee</h3>
 
         <div className="input-group-row"> {/* Updated class name for styling */}
-          <div className="input-group">
-            <label htmlFor="treatment">Treatment Prescribed:</label>
+          <div className="lab-data-group">
+            <h3>Treatment Prescribed:</h3>
             <input
               type="text"
               id="treatment"
               name="treatment"
-              placeholder="Enter treatment prescribed"
+              placeholder="Treatment"
               value={caseData.treatment}
               onChange={handleChange}
               required
             />
-          </div>
 
-          <div className="input-group">
-            <label htmlFor="dose">Dose:</label>
+            <h3>Dose(mg/day):</h3>
             <input
               type="text"
               id="dose"
