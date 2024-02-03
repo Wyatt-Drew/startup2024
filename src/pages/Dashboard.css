@@ -29,5 +29,5 @@
 
 /* Optional: Adjust button styles on hover to match the theme more closely */
 .dashboard-item button:hover {
-    background-color: #229954; /* A green color on hover, matching the add-more button hover state */
+    background-color: #367ab3; /* A green color on hover, matching the add-more button hover state */
 }
