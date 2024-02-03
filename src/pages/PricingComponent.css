@@ -23,7 +23,7 @@
   
   /* Label for the recommended tier */
   .recommended::after {
-    content: "Our Recommendation";
+    content: "Most Popular";
     position: absolute;
     top: -10px;
     left: 50%;
@@ -71,3 +71,15 @@
     border-radius: 5px;
     font-size: 0.8em;
   }
+  .pricing-header h1 {
+    text-align: center;
+    font-size: 2em; /* Adjust size as needed */
+    margin-bottom: 0.5em;
+  }
+  
+  .pricing-header p {
+    text-align: center;
+    font-size: 1.2em; /* Adjust size as needed */
+    margin-bottom: 2em; /* Provides spacing between the subheading and the pricing tiers */
+  }
+  

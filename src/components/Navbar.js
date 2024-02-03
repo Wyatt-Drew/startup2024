@@ -39,9 +39,6 @@ const Navbar = () => {
       <NavItem title="Dashboard" to="/Dashboard"/>
       <NavItem title="Prices & Access" dropdownContent={<div><ul style={{listStyleType: 'none'}}>
               <li>
-                <Link to="/PricingIndividual">Single Accounts</Link>
-              </li>
-              <li>
               <Link to="/PricingComponent">Buisness Solutions</Link>
               </li>
               <li>

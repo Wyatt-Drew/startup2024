@@ -11,6 +11,7 @@ import Dashboard from './pages/Dashboard';
 import QuotePage from './pages/QuotePage';
 import { UserProvider } from './contexts/UserContext';
 import PricingComponent from './pages/PricingComponent';
+import PaymentPage from './pages/PaymentPage';
 function App() {
   return (
     <UserProvider>
@@ -27,6 +28,7 @@ function App() {
         <Route path="/CaseForm" element={<CaseForm />} />
         <Route path="/QuotePage" element={<QuotePage />} />
         <Route path="/PricingComponent" element={<PricingComponent />} />
+        <Route path="/PaymentPage" element={<PaymentPage />} />
       </Routes>
       <Footer/>
       <Chatbot/>
