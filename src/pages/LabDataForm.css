@@ -4,9 +4,10 @@
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-  }
-  
-  .lab-data-form {
+    background-color: #62bdd6;
+}
+
+.lab-data-form {
     width: 100%;
     max-width: 600px;
     background: #f9f9f9;
@@ -14,22 +15,68 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .input-group, .lab-data-group {
+}
+
+.input-group, .lab-data-group {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Change to nowrap if you want to strictly enforce inline display */
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
-  }
-  
-  input[type="file"],
-  input[type="text"],
-  input[type="number"] {
+}
+
+input[type="file"],
+input[type="text"],
+input[type="number"] {
     flex-grow: 1;
     padding: 8px;
-    border: 2px solid #ccc;
+    border: 2px solid #b0b0b0;
     border-radius: 4px;
     background: #fff;
-  }
+    color: black;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #367ab3;
+}
+
+.remove-field, .add-more {
+    background-color: #e74c3c; /* For remove-field */
+    color: white;
+}
+
+.remove-field:hover, .add-more:hover {
+    background-color: #c0392b;
+}
+
+/* Updated styles */
+.add-more {
+    background-color: #27ae60; /* Green color for the "Add More" button */
+}
+
+.add-more:hover {
+    background-color: #229954; /* A slightly darker green on hover */
+}
+
+.lab-data-group {
+    display: flex; /* Ensures inline display */
+    flex-wrap: nowrap; /* Prevents wrapping, adjust as needed */
+    gap: 10px; /* Maintains spacing between elements */
+}
+
+/* Adjustments for better responsiveness if needed */
+@media (max-width: 768px) {
+    .lab-data-group {
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    }
+}
