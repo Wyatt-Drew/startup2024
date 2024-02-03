@@ -26,9 +26,9 @@
     margin-bottom: 15px;
 }
 
-input[type="file"],
-input[type="text"],
-input[type="number"] {
+.lab-data-form-container input[type="file"],
+.lab-data-form-container input[type="text"],
+.lab-data-form-container input[type="number"] {
     flex-grow: 1;
     padding: 8px;
     border: 2px solid #b0b0b0;

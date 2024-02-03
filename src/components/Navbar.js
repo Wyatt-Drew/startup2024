@@ -45,9 +45,6 @@ const Navbar = () => {
               <li>
                 <a href="https://twitter.com/MyCorporateTwitter">Twitter</a>
               </li>
-              <li>
-                <a href="https://twitter.com/MyCorporateTwitter">Careers</a>
-              </li>
             </ul></div>} />
             <NavItem title="Login" to="/login" />
     </nav>
