@@ -28,8 +28,11 @@ const PaymentPage = () => {
             <li key={index}>{item}</li>
           ))}
         </ul>
+      
+      <div className="PaymentButtonContainer">
+        <SimpleGooglePayButton />
       </div>
-      <SimpleGooglePayButton />
+      </div>
     </div>
   );
 };

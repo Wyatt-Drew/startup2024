@@ -1,11 +1,23 @@
-/* PaymentPage.css */
-
 .PaymentPage {
     display: flex;
+    flex-direction: column; /* Display items in a column */
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #62bdd6;
+  }
+  
+  .OrderDetails {
     background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px; /* Add margin for spacing */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center-align the container's content */
+  }
+  
+  .PaymentButtonContainer {
+    margin-top: 20px; /* Add some spacing between ordered items and the button */
   }
   
   .GooglePayButton {
@@ -23,4 +35,3 @@
   .GooglePayButton:hover {
     background-color: #357ae8;
   }
-  
