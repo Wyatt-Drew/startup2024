@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    line-height: 1.5;
   }
   
   /* Base styling for each tier */
@@ -48,4 +49,25 @@
     margin-top: 20px;
     border-radius: 5px;
   }
+  .pricing-tier .price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
   
+  .pricing-tier .licenses, .pricing-tier .support {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .recommendation-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8em;
+  }
