@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './LabDataForm.css'; // Ensure CSS is properly set up
+import './Dashboard.css';
 
 // Example case data
 const initialCases = [
