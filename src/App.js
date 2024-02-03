@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import LoginPage from './pages/LoginPage/LoginPage';
 import Chatbot from './components/Chatbot';
-import JoinCommunityPopup from './components/JoinCommunityPopup';
+import LabDataForm from './pages/LabDataForm';
 
 function App() {
   return (
@@ -13,10 +13,10 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/" element={<HomePage />} />
+        {/* <Route path="/" element={<HomePage />} /> */}
+        <Route path="/" element={<LabDataForm />} />
       </Routes>
       <Footer/>
-      <JoinCommunityPopup/>
       {/* <Chatbot/> */}
       
     </HashRouter>
