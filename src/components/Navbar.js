@@ -35,7 +35,18 @@ const Navbar = () => {
       <NavItem title="About" to="/"/>
       <NavItem title="Start Case" to="/LabDataForm"/>
       <NavItem title="Dashboard" to="/Dashboard"/>
-      <NavItem title="Contact Us" dropdownContent={<div><ul style={{listStyleType: 'none'}}>
+      <NavItem title="Prices & Access" dropdownContent={<div><ul style={{listStyleType: 'none'}}>
+              <li>
+                <Link to="/PricingIndividual">Single Accounts</Link>
+              </li>
+              <li>
+              <Link to="/PricingBuisness">Buisness Solutions</Link>
+              </li>
+              <li>
+              <Link to="/QuotePage">Academia and Government</Link>
+              </li>
+            </ul></div>} />
+            <NavItem title="Contact Us" dropdownContent={<div><ul style={{listStyleType: 'none'}}>
               <li>
                 <a href="mailto:MyCorporateEmail@gmail.com">Email</a>
               </li>

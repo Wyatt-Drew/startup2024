@@ -8,6 +8,7 @@ import Chatbot from './components/Chatbot';
 import CaseForm from './pages/CaseForm';
 import LabDataForm from './pages/LabDataForm';
 import Dashboard from './pages/Dashboard';
+import QuotePage from './pages/QuotePage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/LabDataForm" element={<LabDataForm />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/CaseForm" element={<CaseForm />} />
+        <Route path="/QuotePage" element={<QuotePage />} />
       </Routes>
       <Footer/>
       <Chatbot/>

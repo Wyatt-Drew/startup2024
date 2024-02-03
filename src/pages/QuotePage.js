@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import picture from '../../assets/farming.png';
 import './QuotePage.css';
 
 function QuotePage() {
     const [formData, setFormData] = useState({
+        organization: '',
         name: '',
         email: '',
-        eventDate: '',
-        eventType: '',
+        phoneNumber: '',
         additionalInfo: ''
     });
 
@@ -26,10 +25,22 @@ function QuotePage() {
 
     return (
         <div className = "container">
-            <img className = "image" src={picture} alt="Event" />
+            <div className = "salesPitch">
+                <div>
+                <h1>Unlock the Future of Healthcare</h1>
+            <p></p>
+            <p>Bridge the Gap with Our Cutting-Edge Database Subscriptions. Discover the Missing Link between Laboratory Efficacy and Real-World Antibiotic Performance. Empower Your Research and Decision-Making with Unparalleled Insights.</p>
+           
+                </div>
+             </div>
+            
             <form className="quote-form" onSubmit={handleSubmit}>
                 <h2>Get a free quote</h2>
-                <p>Tell us more about your event, contact us. We are happy to assist you.</p>
+                <p>We are happy to help you. Please fill out the form below and one of our experts will contact you shortly.</p>
+                <div>
+                    <label>Organization:</label>
+                    <input type="text" name="organization" value={formData.organization} onChange={handleChange} />
+                </div>
                 <div>
                     <label>Name:</label>
                     <input type="text" name="name" value={formData.name} onChange={handleChange} />
@@ -39,23 +50,17 @@ function QuotePage() {
                     <input type="email" name="email" value={formData.email} onChange={handleChange} />
                 </div>
                 <div>
-                    <label>Event Date:</label>
-                    <input type="date" name="eventDate" value={formData.eventDate} onChange={handleChange} />
-                </div>
-                <div>
-                <label>Event Type:</label>
-                <select name="eventType" value={formData.eventType} onChange={handleChange}>
-                    <option value="">Select an event type</option>
-                    <option value="Wedding">Wedding</option>
-                    <option value="Birthday">Birthday</option>
-                    <option value="Corporate Event">Corporate Event</option>
-                </select>
+                    <label>Phone Number:</label>
+                    <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} />
                 </div>
                 <div>
                     <label>Additional Information:</label>
                     <input type="text" name="additionalInfo" value={formData.additionalInfo} onChange={handleChange}/>
                 </div>
-                <button type="submit">Send</button>
+                <div className = "button-container">
+                <button type="submit">Get in touch</button>
+                </div>
+                
             </form>
         </div>
     );
