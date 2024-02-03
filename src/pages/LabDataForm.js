@@ -15,8 +15,12 @@ const LabDataForm = () => {
   };
 
   const handleAddFields = () => {
+    setLabData([...labData, { drugName: '', mic: '' }]);
+  };
+
+  const handleRemoveFields = index => {
     const values = [...labData];
-    values.push({ drugName: '', mic: '' });
+    values.splice(index, 1);
     setLabData(values);
   };
 
@@ -30,39 +34,43 @@ const LabDataForm = () => {
   return (
     <div className="lab-data-form-container">
       <form onSubmit={handleSubmit} className="lab-data-form">
+        <h2>Lab Data Submission</h2>
         <div className="input-group">
-          <span>Fasta:</span>
+          <label htmlFor="fasta">Fasta File:</label>
           <input type="file" id="fasta" name="fasta" accept=".fasta" required />
         </div>
 
         <div className="input-group">
-          <span>Site of infection:</span>
+          <label htmlFor="siteOfInfection">Site of infection:</label>
           <input type="text" id="siteOfInfection" name="siteOfInfection" placeholder="Enter site of infection" required />
         </div>
 
         {labData.map((inputField, index) => (
           <div key={index} className="lab-data-group">
-            <span>Drug Name:</span>
+            <label htmlFor={`drugName-${index}`}>Drug Name:</label>
             <input
               type="text"
               name="drugName"
+              id={`drugName-${index}`}
               placeholder="Drug Name"
               value={inputField.drugName}
               onChange={(event) => handleLabDataChange(index, event)}
               required
             />
-            <span>MIC:</span>
+            <label htmlFor={`mic-${index}`}>MIC:</label>
             <input
               type="number"
               name="mic"
+              id={`mic-${index}`}
               placeholder="MIC"
               value={inputField.mic}
               onChange={(event) => handleLabDataChange(index, event)}
               required
             />
+            <button type="button" onClick={() => handleRemoveFields(index)} className="remove-field">-</button>
           </div>
         ))}
-        <button type="button" onClick={handleAddFields} className="add-more">+</button>
+        <button type="button" onClick={handleAddFields} className="add-more">Add More</button>
         <button type="submit">Submit</button>
       </form>
     </div>
