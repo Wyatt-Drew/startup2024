@@ -4,16 +4,15 @@ import './TeamPage.css';
 
 const TeamPage = () => {
     const employees = [
-        { id: 1, name: 'Wyatt Drew - Founder & CEO', image: profile1 },
-        { id: 2, name: 'Wyatt Drew - Sales Director', image: profile1 },
-        { id: 3, name: 'Wyatt Drew - Event Director', image: profile1 },
-        { id: 4, name: 'Wyatt Drew - Product Designer', image: profile1 },
-        { id: 5, name: 'Wyatt Drew - Research & Development', image: profile1 },
-        { id: 6, name: 'Wyatt Drew - Event Specialist', image: profile1 },
-        { id: 7, name: 'Wyatt Drew', image: profile1 },
-        { id: 8, name: 'Wyatt Drew', image: profile1 },
+        { id: 1, name: 'Joshua Adams - Founder & CEO', image: profile1 },
+        { id: 2, name: 'Wyatt Drew - Front End Developer', image: profile1 },
+        { id: 3, name: 'Isabella Resendes - Event Specialist', image: profile1 },
+        { id: 4, name: 'Enmanuel Güichard - Product Designer', image: profile1 },
+        { id: 5, name: 'Aleen Hasnani - Back End Developer', image: profile1 },
+        { id: 6, name: 'Chris Hay - Research & Development', image: profile1 },
     ];
-
+    
+ 
     return (
     <div className="TeamPage">
     <h1>Meet Our Team</h1>
