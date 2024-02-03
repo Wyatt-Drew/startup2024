@@ -1,0 +1,26 @@
+/* PaymentPage.css */
+
+.PaymentPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .GooglePayButton {
+    background-color: #4285f4;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .GooglePayButton:hover {
+    background-color: #357ae8;
+  }
+  
