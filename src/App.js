@@ -9,9 +9,13 @@ import CaseForm from './pages/CaseForm';
 import LabDataForm from './pages/LabDataForm';
 import Dashboard from './pages/Dashboard';
 import QuotePage from './pages/QuotePage';
-
+import { UserProvider } from './contexts/UserContext';
+import PricingComponent from './pages/PricingComponent';
 function App() {
   return (
+    <UserProvider>
+
+    
     <HashRouter>
       <Navbar/>
       <Routes>
@@ -22,11 +26,13 @@ function App() {
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/CaseForm" element={<CaseForm />} />
         <Route path="/QuotePage" element={<QuotePage />} />
+        <Route path="/PricingComponent" element={<PricingComponent />} />
       </Routes>
       <Footer/>
       <Chatbot/>
       
     </HashRouter>
+    </UserProvider>
   );
 }
 

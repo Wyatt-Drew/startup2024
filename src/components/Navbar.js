@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../assets/aureus_logo.png';
+import { useUser } from '../contexts/UserContext'; 
 
 const Dropdown = ({ children }) => {
   return (
@@ -27,6 +28,7 @@ const NavItem = ({ title, dropdownContent, to }) => {
 };
 
 const Navbar = () => {
+  const { user } = useUser();
   return (
     <nav className="navbar">
                       <Link to="/" className='nav-item logo-container'>
@@ -40,7 +42,7 @@ const Navbar = () => {
                 <Link to="/PricingIndividual">Single Accounts</Link>
               </li>
               <li>
-              <Link to="/PricingBuisness">Buisness Solutions</Link>
+              <Link to="/PricingComponent">Buisness Solutions</Link>
               </li>
               <li>
               <Link to="/QuotePage">Academia and Government</Link>
@@ -57,7 +59,12 @@ const Navbar = () => {
                 <a href="https://twitter.com/MyCorporateTwitter">Twitter</a>
               </li>
             </ul></div>} />
-            <NavItem title="Login" to="/login" />
+            {user ? (
+              <NavItem title={user.username} to="/">{user.username}</NavItem>
+       
+      ) : (
+        <NavItem title="Login" to="/Login"/>
+      )}
     </nav>
   );
 };
