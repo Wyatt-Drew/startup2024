@@ -3,9 +3,13 @@ import './LabDataForm.css'; // Ensure CSS is properly set up
 
 // Example case data
 const initialCases = [
-  { id: 1, disease: 'Streptococcus viridis-123', site: 'Knee', treatment: '', dose: '', outcome: '' },
-  // Add more cases here
-];
+    { id: 1, disease: 'Streptococcus viridis-123', site: 'Knee', treatment: '', dose: '', outcome: '' },
+    { id: 2, disease: 'Escherichia coli O157:H7', site: 'Gastrointestinal', treatment: '', dose: '', outcome: '' },
+    { id: 3, disease: 'Mycobacterium tuberculosis', site: 'Lung', treatment: '', dose: '', outcome: '' },
+    { id: 4, disease: 'Staphylococcus aureus', site: 'Skin', treatment: '', dose: '', outcome: '' },
+    { id: 5, disease: 'Clostridium difficile', site: 'Colon', treatment: '', dose: '', outcome: '' }
+  ];
+  
 
 const Dashboard = () => {
   const [cases, setCases] = useState(initialCases);
